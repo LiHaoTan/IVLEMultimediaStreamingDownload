@@ -1,5 +1,15 @@
-1. Install FFMpeg.
+1. Install FFMpeg. (See Below)
 2. Run the Javascript code below and copy the code into command line. (without the outermost double quotes)
+
+#macOS
+```bash
+brew install ffmpeg
+```
+
+#Ubuntu
+```bash
+apt-get install ffmpeg
+```
 
 ```javascript
 "ffmpeg -i \"https://"
