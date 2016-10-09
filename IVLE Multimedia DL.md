@@ -1,5 +1,5 @@
 1. Install FFmpeg. (See Below)
-2. Run the Javascript code below and copy the printed FFmpeg command into command line.
+2. Run the Javascript code below (can be saved to snippets) and the FFmpeg command will be copied to your clipboard.
 
 #macOS
 ```bash
@@ -24,12 +24,12 @@ var fileName = url.substr(lastSlashIndex + 1, extensionIndex - lastSlashIndex - 
 
 //alternative regular expression just for fun /[^\/]+(?:\.mp4\.m3u8$)/
 
-console.log("ffmpeg -i \"https://"
+ copy("ffmpeg -i \"https://"
  + escape(url.substr(8))
- + "\" -bsf:a aac_adtstoasc -vcodec copy -c copy -crf 50 " + fileName + ".mp4");
+ + "\" -bsf:a aac_adtstoasc -vcodec copy -c copy -crf 50 \"" + fileName + ".mp4\"");
 
- "Sucess! Copy the above FFmpeg command"
+ "Success! The FFmpeg command is now copied to your clipboard."
 ```
 
 #Example Output:
-ffmpeg -i "https://vod.nus.edu.sg/hls-vod/ivle/users/13342cd6-97ce-4859-8185-5fe7b296ca56/NUS%20CFG_4_Happiness%20Seminar_20160908.mp4.m3u8" -bsf:a aac_adtstoasc -vcodec copy -c copy -crf 50 file.mp4
+Sucess! The FFmpeg command is now copied to your clipboard.
