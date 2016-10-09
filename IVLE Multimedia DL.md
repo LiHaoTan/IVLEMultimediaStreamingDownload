@@ -12,7 +12,7 @@ apt-get install ffmpeg
 ```
 
 #Windows
-Go to https://www.ffmpeg.org/ to download and install
+Go to https://www.ffmpeg.org/ to download and install.
 
 #Javascript
 ```javascript
