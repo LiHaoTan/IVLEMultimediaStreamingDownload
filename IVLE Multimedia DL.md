@@ -1,5 +1,5 @@
-1. Install FFMpeg. (See Below)
-2. Run the Javascript code below and copy the code into command line. (without the outermost double quotes)
+1. Install FFmpeg. (See Below)
+2. Run the Javascript code below and copy the printed FFmpeg command into command line.
 
 #macOS
 ```bash
@@ -11,6 +11,9 @@ brew install ffmpeg
 apt-get install ffmpeg
 ```
 
+#Windows
+Go to https://www.ffmpeg.org/ to download and install
+
 #Javascript
 ```javascript
 var url = document.getElementById("ctl00_ctl00_ContentPlaceHolder1_ContentPlaceHolder1_hidFilePath").value;
@@ -21,9 +24,11 @@ var fileName = url.substr(lastSlashIndex + 1, extensionIndex - lastSlashIndex - 
 
 //alternative regular expression just for fun /[^\/]+(?:\.mp4\.m3u8$)/
 
-"ffmpeg -i \"https://"
+console.log("ffmpeg -i \"https://"
  + escape(url.substr(8))
- + "\" -bsf:a aac_adtstoasc -vcodec copy -c copy -crf 50 " + fileName + ".mp4";
+ + "\" -bsf:a aac_adtstoasc -vcodec copy -c copy -crf 50 " + fileName + ".mp4");
+
+ "Sucess! Copy the above FFmpeg command"
 ```
 
 #Example Output:
